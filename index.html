@@ -8,15 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FreeOrbit4D: Training-free Arbitrary Camera Redirection for Monocular Videos via Geometry-Complete 4D Reconstruction</title>
 
-  <!-- Google Analytics - 网站访问统计 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTZL4SD545"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZTZL4SD545');
-  </script>
-
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
   <style>
@@ -28,11 +19,191 @@
   <link rel="stylesheet" href="https://freeorbit4d.pages.dev/static/css/bulma.min.css">
   <link rel="stylesheet" href="https://freeorbit4d.pages.dev/static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="https://freeorbit4d.pages.dev/static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="https://freeorbit4d.pages.dev/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn-files.yliu.me/css_files/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="https://freeorbit4d.pages.dev/static/css/index.css">
   <link rel="icon" href="https://freeorbit4d.pages.dev/assets/icon.png">
+
+  <style>
+    /* ============================================================
+       FreeOrbit4D – Visual Enhancement Styles (UIUC Theme)
+       Illini Blue: #13294B  |  Light Blue: #4a6fa5
+       ============================================================ */
+
+    html { scroll-behavior: smooth; }
+
+    /* ----- Hero ----- */
+    section.hero {
+      background: linear-gradient(150deg, #ffffff 0%, #edf1f8 55%, #e4ecf7 100%);
+      border-bottom: 1px solid #c8d5e8;
+    }
+
+    .publication-title img {
+      filter: drop-shadow(0 6px 18px rgba(19, 41, 75, 0.18));
+    }
+
+    /* Conference badge */
+    .publication-title .subtitle.is-5 em {
+      background: linear-gradient(135deg, #13294B 0%, #1e3a66 100%);
+      color: white;
+      padding: 0.28em 0.95em;
+      border-radius: 2em;
+      font-style: normal;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(19, 41, 75, 0.35);
+      letter-spacing: 0.04em;
+      display: inline-block;
+    }
+
+    /* Author links */
+    .publication-authors .author-block a {
+      color: #333;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: color 0.18s, border-color 0.18s;
+    }
+    .publication-authors .author-block a:hover {
+      color: #13294B;
+      border-color: #13294B;
+    }
+
+    /* ----- Publication buttons ----- */
+    .publication-links .button.is-dark {
+      background-color: #13294B !important;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+      box-shadow: 0 2px 8px rgba(19, 41, 75, 0.25);
+    }
+    .publication-links .button.is-dark:hover {
+      background-color: #1e3a66 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(19, 41, 75, 0.35);
+    }
+
+    /* ----- TL;DR callout ----- */
+    .tldr-section > .column.is-four-fifths {
+      background: linear-gradient(135deg, #edf2fb 0%, #e4ecf7 100%);
+      border-left: 4px solid #13294B;
+      border-radius: 10px;
+      box-shadow: 0 3px 16px rgba(19, 41, 75, 0.09);
+    }
+
+    /* ----- Alternating section backgrounds ----- */
+    section.section:nth-of-type(2n) {
+      background-color: #f5f7fb;
+    }
+
+    /* Section headings */
+    .title.is-3 {
+      margin-bottom: 1.8rem !important;
+      letter-spacing: -0.01em;
+      color: #13294B !important;
+    }
+
+    /* ----- 4D Visualization videos / iframes ----- */
+    .visualization-row .side-video video,
+    .visualization-row .center-viewer iframe {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.13) !important;
+      transition: box-shadow 0.22s ease, transform 0.22s ease;
+    }
+    .visualization-row .side-video video:hover,
+    .visualization-row .center-viewer iframe:hover {
+      box-shadow: 0 14px 38px rgba(19, 41, 75, 0.20) !important;
+      transform: translateY(-2px);
+    }
+
+    /* ----- Qualitative / Comparison videos ----- */
+    .qual-row .qual-video video {
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10) !important;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .qual-row .qual-video video:hover {
+      box-shadow: 0 10px 28px rgba(19, 41, 75, 0.18) !important;
+      transform: scale(1.015);
+    }
+
+    .comp-video video {
+      box-shadow: 0 3px 12px rgba(0,0,0,0.09) !important;
+      transition: box-shadow 0.2s ease;
+    }
+    .comp-video video:hover {
+      box-shadow: 0 8px 22px rgba(19, 41, 75, 0.16) !important;
+    }
+
+    /* ----- Application section videos ----- */
+    .app-video-item video {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.13) !important;
+      transition: box-shadow 0.22s ease;
+    }
+    .app-video-item video:hover {
+      box-shadow: 0 14px 36px rgba(19, 41, 75, 0.20) !important;
+    }
+
+    /* App tab cards */
+    .app-tab {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .app-tab:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      border-color: #13294B !important;
+    }
+    .app-tab.active {
+      border-color: #13294B !important;
+      box-shadow: 0 6px 20px rgba(19, 41, 75, 0.20);
+    }
+
+    /* ----- BibTeX dark block ----- */
+    #BibTeX .title {
+      margin-bottom: 1rem !important;
+      color: #13294B !important;
+    }
+    #BibTeX pre {
+      background: #13294B !important;
+      color: #d6e4f7 !important;
+      border-radius: 12px !important;
+      padding: 1.8em !important;
+      box-shadow: 0 6px 24px rgba(19, 41, 75, 0.22) !important;
+      border: 1px solid #1e3a66 !important;
+      font-size: 0.9em !important;
+      overflow-x: auto !important;
+    }
+    #BibTeX pre code {
+      background: transparent !important;
+      color: inherit !important;
+      padding: 0 !important;
+    }
+
+    /* ----- Footer ----- */
+    footer.footer {
+      background: #ffffff;
+      border-top: none;
+    }
+    footer.footer p, footer.footer a {
+      color: #13294B !important;
+    }
+    footer.footer a:hover {
+      color: #1e3a66 !important;
+    }
+
+    /* ----- Mobile tab buttons ----- */
+    .mobile-tab {
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: background 0.18s, color 0.18s, border-color 0.18s, box-shadow 0.18s;
+    }
+    .mobile-tab:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .mobile-tab.active {
+      background: #13294B !important;
+      border-color: #13294B !important;
+      box-shadow: 0 3px 10px rgba(19, 41, 75, 0.30);
+    }
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://freeorbit4d.pages.dev/static/js/fontawesome.all.min.js"></script>
@@ -42,13 +213,13 @@
 </head>
 <body>
 
-<!-- ==================== 第1部分：导航栏 (Navbar) ====================
-     顶部导航，包含主页链接和相关研究下拉菜单
-     - navbar-burger: 移动端汉堡菜单按钮
-     - navbar-menu: 导航菜单内容
-     - has-dropdown: 下拉菜单（More Research）
-     [已注释 - 暂时隐藏，以后可能会用]
-     ================================================================= 
+<!-- ==================== Part 1: Navigation Bar (Navbar) ====================
+     Top navigation bar with home link and related research dropdown
+     - navbar-burger: mobile hamburger menu button
+     - navbar-menu: navigation menu content
+     - has-dropdown: dropdown menu (More Research)
+     [Commented out - temporarily hidden, may be used later]
+     =======================================================================
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -91,13 +262,13 @@
 -->
 
 
-<!-- ==================== 第2部分：Hero 区域 ====================
-     论文标题、作者列表、机构信息、链接按钮
-     - publication-title: 论文标题
-     - publication-authors: 作者列表（带上标标注机构）
-     - publication-links: 链接按钮 (Paper/arXiv/Video/Code/Data)
-     [已注释 - 匿名审稿期间隐藏，录用后恢复]
-     ============================================================
+<!-- ==================== Part 2: Hero Section ====================
+     Paper title, author list, affiliations, and link buttons
+     - publication-title: paper title
+     - publication-authors: author list (with superscript affiliation markers)
+     - publication-links: link buttons (Paper/arXiv/Video/Code/Data)
+     [Commented out - hidden during anonymous review, restore after acceptance]
+     =================================================================
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -187,20 +358,29 @@
 </section>
 -->
 
-<!-- ==================== 第2部分(匿名版)：Hero 区域 ====================
-     匿名审稿期间使用的简化版本，录用后删除此部分并恢复上面的完整版
-     ===================================================================== -->
+<!-- ==================== Part 2 (anonymous version): Hero Section ====================
+     Simplified version used during anonymous review.
+     Delete this and restore the full version above after acceptance.
+     =================================================================================== -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <!-- 论文标题 -->
+          <!-- Paper title -->
           <div class="publication-title">
             <img src="https://freeorbit4d.pages.dev/assets/title.png" alt="FreeOrbit4D" style="max-width: 300px; height: auto; margin-bottom: 0.5em;">
-            <h2 class="title is-2" style="font-weight: normal; margin-bottom: 1em;">FreeOrbit4D: Training-free Arbitrary Camera Redirection for Monocular Videos via Geometry-Complete 4D Reconstruction</h2>
+            <h2 class="title is-3" style="font-weight: 500; margin-bottom: 0.3em; font-size: 2.2rem;">FreeOrbit4D: Training-free Arbitrary Camera Redirection for Monocular Videos via Geometry-Complete 4D Reconstruction</h2>
+            <p class="subtitle is-5" style="font-weight: 300; margin-top: 0.0em; margin-bottom: 0.5em; font-style: italic;"><em style="font-weight: 400; margin-top: 0.0em; margin-bottom: 0.5em; font-style: italic;">ACM SIGGRAPH 2026 Conference Papers</em></p>
+            <!--
+            <p style="margin-bottom: 1em;">
+              <a href="https://github.com/VVeiCao/FreeOrbit4D"><img src="https://img.shields.io/github/stars/VVeiCao/FreeOrbit4D?style=social" alt="GitHub Stars"></a>
+              &nbsp;&nbsp;
+              <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2FarXiv%3A2601.18993%3Ffields%3DcitationCount&query=citationCount&label=Citations&style=social&logo=semanticscholar" alt="Citations">
+            </p>
+            -->
           </div>
-          <!-- 作者��表 -->
+          <!-- Author list -->
           <div class="is-size-5 publication-authors">
             <span class="author-block"><a href="https://vveicao.github.io/">Wei Cao</a><sup>1</sup>,</span>
             <span class="author-block"><a href="https://haoz19.github.io/">Hao Zhang</a><sup>1</sup>,</span>
@@ -211,14 +391,14 @@
             <span class="author-block"><a href="https://ningyu1991.github.io/">Ning Yu</a><sup>3</sup>,</span>
             <span class="author-block"><a href="https://yaoyaoliu.web.illinois.edu/">Yaoyao Liu</a><sup>1</sup></span>
           </div>
-          <!-- 机构信息 -->
+          <!-- Affiliations -->
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign,</span>
             <span class="author-block"><sup>2</sup>University of Pennsylvania,</span>
             <span class="author-block"><sup>3</sup>Eyeline Labs</span>
           </div>
 
-          <!-- 链接按钮 -->
+          <!-- Link buttons -->
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
@@ -230,6 +410,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
+              &nbsp;&nbsp;
               <span class="link-block">
                 <a href="https://github.com/VVeiCao/FreeOrbit4D"
                    class="external-link button is-normal is-rounded is-dark">
@@ -248,10 +429,10 @@
   </div>
 </section>
 
-<!-- ==================== 第3部分：Teaser 视频 ====================
-     展示核心成果的预览视频
-     - 自动播放、静音、循环播放
-     - 下方有简短的描述文字
+<!-- ==================== Part 3: Teaser Video ====================
+     Preview video showcasing the core results
+     - autoplay, muted, loop
+     - brief description text below
      ============================================================== -->
 <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -270,11 +451,11 @@
 </section> -->
 
 
-<!-- ==================== 第4部分：视频轮播 (Carousel) ====================
-     使用 Bulma Carousel 组件展示多个结果视频
-     - results-carousel: 轮播容器
-     - 每个 item 包含一个自动播放的视频
-     - 可左右滑动浏览不同的结果
+<!-- ==================== Part 4: Video Carousel ====================
+     Uses the Bulma Carousel component to display multiple result videos
+     - results-carousel: carousel container
+     - each item contains one autoplay video
+     - swipe left/right to browse results
      ==================================================================== -->
 <!--
 <section class="hero is-light is-small">
@@ -336,10 +517,10 @@
 -->
 
 
-<!-- ==================== 第5部分：Abstract 论文摘要 ====================
-     论文的摘要内容，居中显示
-     - is-four-fifths: 占据页面4/5宽度
-     - has-text-justified: 两端对齐
+<!-- ==================== Part 5: Abstract ====================
+     Paper abstract, centered layout
+     - is-four-fifths: 4/5 page width
+     - has-text-justified: justified text alignment
      ==================================================================== -->
 <!--
 <section class="section">
@@ -373,36 +554,36 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- ==================== 第6部分：嵌入 YouTube 视频 ====================
-         论文演示视频，使用 iframe 嵌入 YouTube
-         - publication-video: 响应式视频容器（16:9 比例）
+    <!-- ==================== Part 6: Embedded Video ====================
+         Paper demo video embedded via HTML5 video element
+         - publication-video: responsive video container (16:9 ratio)
          ==================================================================== -->
     <!-- TL;DR -->
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered tldr-section">
       <div class="column is-four-fifths">
-        <p class="is-size-5" style="margin-bottom: 1.5em;">
+        <p class="is-size-5" style="margin-bottom: 0em;">
           <strong>TL;DR:</strong> FreeOrbit4D is an effective training-free method for large-angle camera redirection via geometry-complete 4D proxy.
         </p>
       </div>
     </div>
 
-    <!-- Paper video 论文视频 -->
+    <!-- Paper video -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-3">Video</h2> -->
         <div class="publication-video" style="max-width: 1800px; margin: 0 auto;">
           <video controls style="width: 100%;">
-            <source src="https://cdn-files.yliu.me/FreeOrbit-4_compressed.mp4" type="video/mp4">
+            <source src="https://cdn-files.yliu.me/videos/FreeOrbit4D.mp4" type="video/mp4">
           </video>
         </div>
       </div>
     </div>
-    <!--/ Paper video 论文视频结束 -->
+    <!--/ Paper video end -->
 
-    <!-- ==================== 4D 点云可视化 ====================
-         使用 Viser 播放器展示 4D 动态点云序列
-         三列布局：左边视频 | 中间4D点云 | 右边视频
-         ======================================================= -->
+    <!-- ==================== 4D Point Cloud Visualization ====================
+         Uses the Viser player to display 4D dynamic point cloud sequences
+         Three-column layout: left video | center 4D point cloud | right video
+         ======================================================================= -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">4D Reconstruction Visualization</h2>
@@ -411,7 +592,7 @@
             Interactive 4D point cloud reconstruction results. You can rotate, zoom, and play the dynamic sequence. For the best experience, please view on a desktop browser.
           </p>
         </div>
-        <!-- 三列容器样式 -->
+        <!-- Three-column container styles -->
         <style>
           .visualization-row {
             display: flex;
@@ -459,7 +640,7 @@
               height: 300px;
             }
           }
-          /* 手机端：一行显示3个 */
+          /* mobile: show 3 per row */
           @media (max-width: 768px) {
             .visualization-row {
               flex-wrap: nowrap;
@@ -476,21 +657,21 @@
             }
           }
         </style>
-        <!-- 第一行：Camel -->
+        <!-- Row 1: Camel -->
         <div class="visualization-row">
-          <!-- 左边：输入视频 -->
+          <!-- Left: input video -->
           <div class="side-video">
             <video autoplay muted loop playsinline>
               <source src="https://freeorbit4d.pages.dev/assets/camel/input_video.mp4" type="video/mp4">
             </video>
             <p class="is-size-7">Input Video</p>
           </div>
-          <!-- 中间：4D 点云查看器 -->
+          <!-- Center: 4D point cloud viewer -->
           <div class="center-viewer">
             <iframe src="https://vveicao.github.io/projects/freeorbit4d/build/?playbackPath=https://vveicao.github.io/projects/freeorbit4d/assets/camel/camel_4d_v14.viser&initDistanceScale=1&initHeightOffset=0.0"></iframe>
             <p class="is-size-7">4D Reconstruction</p>
           </div>
-          <!-- 右边：输出视频 -->
+          <!-- Right: output video -->
           <div class="side-video">
             <video autoplay muted loop playsinline>
               <source src="https://freeorbit4d.pages.dev/assets/camel/output_video.mp4" type="video/mp4">
@@ -499,21 +680,21 @@
           </div>
         </div>
 
-        <!-- 第二行：Breakdance -->
+        <!-- Row 2: Breakdance -->
         <div class="visualization-row">
-          <!-- 左边：输入视频 -->
+          <!-- Left: input video -->
           <div class="side-video">
             <video autoplay muted loop playsinline>
               <source src="https://freeorbit4d.pages.dev/assets/breakdance/input_video.mp4" type="video/mp4">
             </video>
             <p class="is-size-7">Input Video</p>
           </div>
-          <!-- 中间：4D 点云查看器 -->
+          <!-- Center: 4D point cloud viewer -->
           <div class="center-viewer">
             <iframe src="https://vveicao.github.io/projects/freeorbit4d/build/?playbackPath=https://vveicao.github.io/projects/freeorbit4d/assets/breakdance/breakdance_4d.viser&initDistanceScale=1&initHeightOffset=0.0"></iframe>
             <p class="is-size-7">4D Reconstruction</p>
           </div>
-          <!-- 右边：输出视频 -->
+          <!-- Right: output video -->
           <div class="side-video">
             <video autoplay muted loop playsinline>
               <source src="https://freeorbit4d.pages.dev/assets/breakdance/output_video.mp4" type="video/mp4">
@@ -522,21 +703,21 @@
           </div>
         </div>
 
-        <!-- 第三行：Unitree -->
+        <!-- Row 3: Unitree -->
         <div class="visualization-row">
-          <!-- 左边：输入视频 -->
+          <!-- Left: input video -->
           <div class="side-video">
             <video autoplay muted loop playsinline>
               <source src="https://freeorbit4d.pages.dev/assets/unitree/input_video.m4v" type="video/mp4">
             </video>
             <p class="is-size-7">Input Video</p>
           </div>
-          <!-- 中间：4D 点云查看器 -->
+          <!-- Center: 4D point cloud viewer -->
           <div class="center-viewer">
             <iframe src="https://vveicao.github.io/projects/freeorbit4d/build/?playbackPath=https://vveicao.github.io/projects/freeorbit4d/assets/unitree/unitree_4d.viser&initDistanceScale=1&initHeightOffset=0.0"></iframe>
             <p class="is-size-7">4D Reconstruction</p>
           </div>
-          <!-- 右边：输出视频 -->
+          <!-- Right: output video -->
           <div class="side-video">
             <video autoplay muted loop playsinline>
               <source src="https://freeorbit4d.pages.dev/assets/unitree/output_video.mp4" type="video/mp4">
@@ -604,7 +785,7 @@
         </style>
 
         <div class="qual-container">
-          <!-- 标题（只写一次） -->
+          <!-- Column headers (written once) -->
           <div class="qual-header">
             <div class="qual-label input-label">Input Video</div>
             <div class="qual-label">Trajectory #1</div>
@@ -663,7 +844,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Quantitative Results</h2>
         
-        <!-- 对比视频样式 + 响应式 -->
+        <!-- Comparison video styles + responsive layout -->
         <style>
           .comparison-container {
             width: 100%;
@@ -672,7 +853,7 @@
           .comparison-header {
             display: flex;
             justify-content: center;
-            flex-wrap: nowrap; /* 桌面端不换行 */
+            flex-wrap: nowrap; /* no wrap on desktop */
             gap: 0.2em;
             margin-bottom: 0.5em;
           }
@@ -689,7 +870,7 @@
           .comparison-row {
             display: flex;
             justify-content: center;
-            flex-wrap: nowrap; /* 桌面端不换行 */
+            flex-wrap: nowrap; /* no wrap on desktop */
             gap: 0.15em;
             margin-bottom: 0.8em;
           }
@@ -707,7 +888,7 @@
             border-radius: 0.3em;
             box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
           }
-          /* 视频上方的方法名标签 - 桌面端隐藏 */
+          /* method name labels above videos - hidden on desktop */
           .comp-video .video-label {
             display: none;
             font-size: 0.75em;
@@ -715,25 +896,25 @@
             margin-bottom: 0.2em;
             color: #363636;
           }
-          /* Input 用 Seaborn 绿色 */
+          /* Input: Seaborn green */
           .comp-video .video-label.label-input {
             color: #2ca02c;
           }
-          /* FreeOrbit4D 用 Seaborn 蓝色 */
+          /* FreeOrbit4D: Seaborn blue */
           .comp-video .video-label.label-ours {
             color: #1f77b4;
           }
-          /* 手机端标签按钮 - 桌面端隐藏 */
+          /* mobile tab buttons - hidden on desktop */
           .mobile-tabs {
             display: none;
           }
           
-          /* 手机端响应式：屏幕宽度 < 768px */
+          /* mobile responsive: screen width < 768px */
           @media screen and (max-width: 768px) {
             .comparison-header {
               display: none; /* 手机端隐藏统一的方法名称行 */
             }
-            /* 手机端标签按钮 */
+            /* mobile tab buttons */
             .mobile-tabs {
               display: flex;
               flex-wrap: wrap;
@@ -755,7 +936,7 @@
               color: white;
               border-color: #3273dc;
             }
-            /* 手机端隐藏非激活的 case */
+            /* hide inactive cases on mobile */
             .comparison-row {
               display: none;
               flex-wrap: wrap;
@@ -766,7 +947,7 @@
               display: flex;
             }
             .comparison-row .comp-video {
-              flex: 0 0 calc(33.33% - 0.5em); /* 3个一行 */
+              flex: 0 0 calc(33.33% - 0.5em); /* 3 per row */
               max-width: calc(33.33% - 0.5em);
             }
             .comparison-row .comp-video.input-video {
@@ -775,13 +956,13 @@
             .comparison-row .comp-video video {
               width: 100%;
             }
-            /* 手机端显示每个视频的标签 */
+            /* show individual video labels on mobile */
             .comp-video .video-label {
               display: block;
             }
           }
           
-          /* 更小屏幕：< 480px，2个一行 */
+          /* smaller screens: < 480px, 2 per row */
           @media screen and (max-width: 480px) {
             .comparison-row .comp-video {
               flex: 0 0 calc(50% - 0.5em);
@@ -791,7 +972,7 @@
         </style>
 
         <div class="comparison-container">
-          <!-- 手机端标签按钮 -->
+          <!-- Mobile tab buttons -->
           <div class="mobile-tabs">
             <span class="mobile-tab active" data-case="0">BMX</span>
             <span class="mobile-tab" data-case="1">Breakdance</span>
@@ -802,7 +983,7 @@
             <span class="mobile-tab" data-case="6">Swing</span>
           </div>
 
-          <!-- 方法名称（桌面端显示） -->
+          <!-- Method names (shown on desktop) -->
           <div class="comparison-header">
             <div class="method-name input-label" style="color: #2ca02c;">Input Video</div>
             <div class="method-name">ReCamMaster</div>
@@ -892,15 +1073,15 @@
 
         </div>
 
-        <!-- 手机端标签切换脚本 -->
+        <!-- Mobile tab switch script -->
         <script>
           document.querySelectorAll('.mobile-tab').forEach(function(tab) {
             tab.addEventListener('click', function() {
               var caseId = this.dataset.case;
-              // 更新标签激活状态
+              // Update active tab state
               document.querySelectorAll('.mobile-tab').forEach(function(t) { t.classList.remove('active'); });
               this.classList.add('active');
-              // 更新视频行显示
+              // Update visible video row
               document.querySelectorAll('.comparison-row').forEach(function(row) {
                 row.classList.remove('mobile-active');
                 row.querySelectorAll('video').forEach(function(v) { v.pause(); });
@@ -918,9 +1099,9 @@
 </section>
 
 
-<!-- ==================== 第7部分：Related Links 相关工作链接 ====================
-         列出相关的研究工作和参考链接
-         =========================================================================== -->
+<!-- ==================== Part 7: Related Links ====================
+         Lists related research work and reference links
+         ================================================================= -->
 <!--
 <section class="section">
   <div class="container is-max-desktop">
@@ -953,8 +1134,8 @@
 -->
 
 
-<!-- ==================== 第10部分：BibTeX 引用格式 ====================
-     提供论文的 BibTeX 引用格式，方便他人引用
+<!-- ==================== Part 10: BibTeX Citation ====================
+     Provides the BibTeX citation for the paper
      =================================================================== -->
 <!--
 <section class="section" id="BibTeX">
@@ -971,8 +1152,8 @@
 -->
 
 
-<!-- ==================== Application 应用展示 ====================
-     标签栏切换不同应用场景的视频
+<!-- ==================== Application Showcase ====================
+     Tab-based switcher for different application scenario videos
      ============================================================== -->
 <section class="section">
   <div class="container is-max-desktop">
@@ -1049,7 +1230,7 @@
         </style>
 
         <div class="app-container">
-          <!-- 标签栏 -->
+          <!-- Tab bar -->
           <div class="app-tabs">
             <div class="app-tab active" onclick="switchAppVideo('color')">
               <img src="https://freeorbit4d.pages.dev/assets/application/color.png" alt="Color Editing">
@@ -1069,7 +1250,7 @@
             </div>
           </div>
 
-          <!-- 视频区域 -->
+          <!-- Video area -->
           <div class="app-video-container">
             <!-- Color -->
             <div class="app-video-row active" id="app-row-color">
@@ -1120,13 +1301,13 @@
 
         <script>
           function switchAppVideo(name) {
-            // 移除所有 active 状态
+            // Remove all active states
             document.querySelectorAll('.app-tab').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.app-video-row').forEach(row => {
               row.classList.remove('active');
               row.querySelectorAll('video').forEach(v => v.pause());
             });
-            // 激活选中的标签和视频
+            // Activate selected tab and video
             event.currentTarget.classList.add('active');
             const activeRow = document.getElementById('app-row-' + name);
             activeRow.classList.add('active');
@@ -1139,16 +1320,27 @@
   </div>
 </section>
 
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      <pre><code>@article{cao2026freeorbit4d,
+  title={FreeOrbit4D: Training-Free Arbitrary Camera Redirection for Monocular Videos via Geometry-Complete 4D Reconstruction},
+  author={Cao, Wei and Zhang, Hao and Tian, Fengrui and Wu, Yulun and Li, Yingying and Wang, Shenlong and Yu, Ning and Liu, Yaoyao},
+  journal={arXiv preprint arXiv:2601.18993},
+  year={2026}
+}</code></pre>
+    </div>
+  </section>
 
-<!-- ==================== 第11部分：Footer 页脚 ====================
-     页脚和版权声明
-     - 包含 PDF 和 GitHub 图标链接
-     - 网站许可证信息（CC BY-SA 4.0）
-     - 模板来源说明
+<!-- ==================== Part 11: Footer ====================
+     Footer and copyright notice
+     - includes PDF and GitHub icon links
+     - site license info (CC BY-SA 4.0)
+     - template credit
      =============================================================== -->
 <footer class="footer">
   <div class="container">
-    <!-- 模板说明 -->
+    <!-- Template credit -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content has-text-centered">
@@ -1165,32 +1357,79 @@
 </footer>
 
 <script>
-  // 减慢 Qualitative Visualization 和 Quantitative Results 视频的播放速度
+  // Slow down playback for Qualitative Visualization and Quantitative Results videos
   document.addEventListener('DOMContentLoaded', function() {
-    // 只在桌面端设置 playbackRate，移动端保持默认速度以确保兼容性
+    // Only set playbackRate on desktop; keep default speed on mobile for compatibility
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
-    
+
     if (!isMobile) {
-      // 选择 Qualitative, Quantitative, Application 中的所有视频
+      // Select all videos in Qualitative, Quantitative, and Application sections
       var qualVideos = document.querySelectorAll('.qual-video video, .comp-video video, .app-video-item video');
       qualVideos.forEach(function(video) {
-        video.playbackRate = 0.7; // 桌面端 0.7 倍速
+        video.playbackRate = 0.7; // 0.7x speed on desktop
       });
+    }
+  });
+</script>
+<!-- Back to top button -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<style>
+  #back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    background: #13294B;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(19, 41, 75, 0.35);
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.2s ease;
+    z-index: 999;
+    pointer-events: none;
+  }
+  #back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  #back-to-top:hover {
+    background: #1e3a66;
+    box-shadow: 0 6px 20px rgba(19, 41, 75, 0.45);
+  }
+</style>
+<script>
+  var btn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
     }
   });
 </script>
 </body>
 </html>
-<!-- ==================== 网站结构总结 ====================
-     1. 导航栏 (Navbar) - 顶部导航
-     2. Hero 区域 - 标题、作者、链接按钮
-     3. Teaser 视频 - 核心成果预览
-     4. 视频轮播 - 多个结果展示
-     5. Abstract - 论文摘要
-     6. YouTube 视频 - 论文演示
-     7. Visual Effects / Matting - 两列视觉效果
-     8. Animation - 交互式滑块插值
-     9. Related Links - 相关工作
-     10. BibTeX - 引用格式
-     11. Footer - 页脚版权
+<!-- ==================== Site Structure Summary ====================
+     1. Navbar - top navigation bar
+     2. Hero section - title, authors, link buttons
+     3. Teaser video - core result preview
+     4. Video carousel - multiple result showcase
+     5. Abstract - paper abstract
+     6. Paper video - demo video
+     7. 4D Reconstruction Visualization - interactive point cloud viewer
+     8. Qualitative Visualization - side-by-side output comparisons
+     9. Quantitative Results - method comparison videos
+     10. Application - edit propagation and composition demos
+     11. BibTeX - citation block
+     12. Footer - template credit
      ======================================================= -->
